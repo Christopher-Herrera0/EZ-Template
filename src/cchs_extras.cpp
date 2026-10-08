@@ -1,6 +1,8 @@
 #include "main.h"
 #include "EZ-Template/api.hpp"
 
+int distance_value = 0;
+
 void intertial_check(){
     /*
     auto check_motors = [&](std::vector<pros::Motor>& motors) {
@@ -17,4 +19,11 @@ void intertial_check(){
         printf("[IC]: IMU on port %d not responding\n", chassis.imu != nullptr ? chassis.imu->get_port() : -1);
     }
     */
+}
+
+void distance_sensor(){
+    while (true){
+        
+        pros::delay(ez::util::DELAY_TIME);
+    }
 }

@@ -14,3 +14,4 @@ inline pros::MotorGroup lift({-18,20});
 inline pros::Motor intake(19);
 inline pros::Motor wrist(15);
 inline pros::Motor claw(-11);
+inline pros::Distance distance(8);

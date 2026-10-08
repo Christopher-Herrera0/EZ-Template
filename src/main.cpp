@@ -1,5 +1,7 @@
 #include "main.h"
 
+extern int distance_value;
+
 /////
 // For installation, upgrading, documentations, and tutorials, check out our website!
 // https://ez-robotics.github.io/EZ-Template/
@@ -270,6 +272,10 @@ void opcontrol() {
   claw.set_brake_mode(MOTOR_BRAKE_BRAKE);
   lift.set_brake_mode(MOTOR_BRAKE_BRAKE);
   wrist.set_brake_mode(MOTOR_BRAKE_BRAKE);
+  printf("1\n");
+  distance_sensor();
+  printf("2\n");
+
 
   while (true) {
     // Gives you some extras to make EZ-Template ezier
@@ -319,8 +325,10 @@ void opcontrol() {
     } else {
       wrist.move(0);
     }
-    
 
+    printf("10\n");
+    printf("Distance_value = %i\n", distance_value);
+    
     pros::delay(ez::util::DELAY_TIME);  // This is used for timer calculations!  Keep this ez::util::DELAY_TIME
   }
 }
